@@ -343,7 +343,7 @@ class DatabaseSeeder extends Seeder
             $townIds = Town::all()->pluck('id');
             $userData = [];
             foreach ($townIds as $tId){
-                for($j = 0; $j < 1000; $j++){
+                for($j = 0; $j < 20; $j++){
                     $userData[] = [
                         'name' => fake()->name(),
                         'email' => fake()->safeEmail(),

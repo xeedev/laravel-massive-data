@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = \App\Models\Country::with('cities')->get();
+//    foreach ($data as $d){
+//        $cities = $d->cities;
+//    }
+    return view('welcome',$data);
 });

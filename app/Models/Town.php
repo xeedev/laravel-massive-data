@@ -11,4 +11,7 @@ class Town extends Model
     protected $fillable = [
         'name','schools', 'hospitals', 'colleges','bars','city_id'
     ];
+    public function users(){
+        return $this->hasMany(User::class);
+    }
 }

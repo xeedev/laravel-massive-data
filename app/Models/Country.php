@@ -15,4 +15,9 @@ class Country extends Model
         'people',
         'world_id'
     ];
+
+    public function cities(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(City::class);
+    }
 }
